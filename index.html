@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SymbiEat — Food Ordering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">SymbiEat<span>.</span></div>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#" class="nav-link" data-section="menu">Menu</a></li>
+          <li><a href="#" class="nav-link" data-section="contact">Contact Us</a></li>
+          <li><a href="#" class="nav-link" id="admin-link">Admin</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="cart-icon">
+            🛒
+            <span class="cart-badge">0</span>
+          </div>
+          <button class="sign-btn">Sign In</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero" id="home-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Order your favourite food here</h1>
+        <p>Choose from a diverse menu featuring a delectable array of dishes and a small mix of ingredients and culinary expertise. Our mission is to satisfy your creative and flexible cooking dinner experience, one delicious meal at a time.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" data-section="menu">View Menu</button>
+          <button class="btn btn-outline" id="view-special-btn">Today's Special</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Image removed since we're using background image -->
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Today's Special Section -->
+  <section class="section special-section" id="special-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Today's Special</h2>
+        <p>Don't miss out on our chef's specially curated dishes for today. Limited time offer!</p>
+      </div>
+      
+      <div class="special-grid">
+        <div class="special-card">
+          <div class="special-badge">Special</div>
+          <div class="special-img">
+            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Truffle Pasta">
+          </div>
+          <div class="special-info">
+            <h3>Truffle Mushroom Pasta</h3>
+            <p>Creamy pasta with wild mushrooms, black truffle, and parmesan cheese. A luxurious dish that will delight your senses.</p>
+            <div class="special-meta">
+              <div class="special-price">
+                <span class="original-price">₹999</span>
+                <span class="discounted-price">₹799</span>
+              </div>
+              <button class="btn btn-primary btn-add-special" data-id="special-1">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="special-card">
+          <div class="special-badge">Chef's Pick</div>
+          <div class="special-img">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Grilled Salmon">
+          </div>
+          <div class="special-info">
+            <h3>Grilled Salmon Steak</h3>
+            <p>Fresh Atlantic salmon grilled to perfection with lemon butter sauce, served with roasted vegetables and herb rice.</p>
+            <div class="special-meta">
+              <div class="special-price">
+                <span class="original-price">₹1199</span>
+                <span class="discounted-price">₹899</span>
+              </div>
+              <button class="btn btn-primary btn-add-special" data-id="special-2">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="special-card">
+          <div class="special-badge">Limited Time</div>
+          <div class="special-img">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Gourmet Burger">
+          </div>
+          <div class="special-info">
+            <h3>Gourmet Truffle Burger</h3>
+            <p>Premium beef patty with truffle aioli, caramelized onions, Swiss cheese, and served with truffle fries.</p>
+            <div class="special-meta">
+              <div class="special-price">
+                <span class="original-price">₹749</span>
+                <span class="discounted-price">₹599</span>
+              </div>
+              <button class="btn btn-primary btn-add-special" data-id="special-3">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="section" id="menu-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Explore our menu</h2>
+        <p>Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+      </div>
+      
+      <div class="categories">
+        <div class="category active" data-category="all">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="All">
+          </div>
+          <span>All</span>
+        </div>
+        <div class="category" data-category="Salad">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Salad">
+          </div>
+          <span>Salad</span>
+        </div>
+        <div class="category" data-category="Rolls">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Rolls">
+          </div>
+          <span>Rolls</span>
+        </div>
+        <div class="category" data-category="Desserts">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Desserts">
+          </div>
+          <span>Desserts</span>
+        </div>
+        <div class="category" data-category="Sandwich">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Sandwich">
+          </div>
+          <span>Sandwich</span>
+        </div>
+        <div class="category" data-category="Cake">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Cake">
+          </div>
+          <span>Cake</span>
+        </div>
+        <div class="category" data-category="Pure Veg">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Pure Veg">
+          </div>
+          <span>Pure Veg</span>
+        </div>
+        <div class="category" data-category="Pasta">
+          <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Pasta">
+          </div>
+          <span>Pasta</span>
+        </div>
+        <div class="category" data-category="Noodles">
+          <div class="category-img">
+            <img src="chickenNoodle.png" alt="Noodles">
+          </div>
+          <span>Noodles</span>
+        </div>
+      </div>
+      
+      <h3 style="margin-bottom: 20px; font-size: 24px;" id="category-title">Top dishes near you</h3>
+      
+      <div class="food-grid" id="food-grid">
+        <!-- Food items will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section hidden" id="contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Get in touch with us through any of the following ways.</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Visit Us</h3>
+            <p>SCHW Street<br>Lupin<br>Pune,Lavale</p>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Call Us</h3>
+            <p>+91 98765 43210<br>+91 91234 56789</p>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email Us</h3>
+            <p>hello@symbieat.com<br>support@symbieat.com</p>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">🕒</div>
+            <h3>Opening Hours</h3>
+            <p>Monday - Friday: 9AM - 10PM<br>Saturday - Sunday: 8AM - 11PM</p>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Section -->
+  <section class="admin-section hidden" id="admin-section">
+    <div class="container">
+      <div class="admin-header">
+        <h1>Admin Panel</h1>
+        <button class="btn btn-outline" id="logout-admin">Logout</button>
+      </div>
+      
+      <div class="admin-tabs">
+        <div class="admin-tab active" data-tab="foods">All Foods List</div>
+        <div class="admin-tab" data-tab="orders">Orders</div>
+        <div class="admin-tab" data-tab="add-item">Add Items</div>
+      </div>
+      
+      <div class="admin-content">
+        <div id="foods-tab" class="admin-tab-content">
+          <table class="foods-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="admin-foods-list">
+              <!-- Admin food items will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="orders-tab" class="admin-tab-content hidden">
+          <p>Orders will be displayed here. No orders yet.</p>
+        </div>
+        
+        <div id="add-item-tab" class="admin-tab-content hidden">
+          <form class="add-item-form" id="add-item-form">
+            <div class="form-group">
+              <label for="item-name">Item Name</label>
+              <input type="text" id="item-name" required>
+            </div>
+            <div class="form-group">
+              <label for="item-category">Category</label>
+              <select id="item-category" required>
+                <option value="">Select Category</option>
+                <option value="Salad">Salad</option>
+                <option value="Rolls">Rolls</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Sandwich">Sandwich</option>
+                <option value="Cake">Cake</option>
+                <option value="Pure Veg">Pure Veg</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Noodles">Noodles</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="item-price">Price (₹)</label>
+              <input type="number" id="item-price" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label for="item-image">Image URL</label>
+              <input type="url" id="item-image" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="item-description">Description</label>
+              <textarea id="item-description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Add Item</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SymbiEat. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-total">
+      <div class="total-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="total-row">
+        <span>Delivery Fee</span>
+        <span>₹49</span>
+      </div>
+      <div class="total-row final">
+        <span>Total</span>
+        <span id="cart-total">$49</span>
+      </div>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div class="modal hidden" id="admin-login-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Admin Login</h2>
+        <button class="close-modal">✕</button>
+      </div>
+      <div class="form-group">
+        <label for="admin-password">Password</label>
+        <div class="password-input">
+          <input type="password" id="admin-password" placeholder="Enter admin password">
+          <button class="toggle-password" type="button">👁️</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="login-admin">Login</button>
+        <button class="btn btn-outline" id="cancel-admin">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
