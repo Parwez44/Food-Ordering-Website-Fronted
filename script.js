@@ -616,7 +616,7 @@ function updateCartUI() {
   
   // Update totals
   cartSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
-  cartTotal.textContent = `₹${(subtotal + 2).toFixed(2)}`;
+  cartTotal.textContent = `₹${(subtotal + 2.99).toFixed(2)}`;
   
   // Add event listeners for cart controls
   document.querySelectorAll('.qty-btn').forEach(btn => {
