@@ -582,7 +582,7 @@ function updateCartUI() {
   if (cart.length === 0) {
     cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     cartSubtotal.textContent = '₹0.00';
-    cartTotal.textContent = '₹49';
+    cartTotal.textContent = '₹2.99';
     return;
   }
   
