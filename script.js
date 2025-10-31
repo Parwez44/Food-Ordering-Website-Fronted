@@ -470,7 +470,7 @@ function setupEventListeners() {
       return;
     }
     
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 2.99;
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 49;
     alert(`Order placed successfully! Total: ₹${total.toFixed(2)}\nThank you for your order!`);
     
     // Clear cart after successful checkout
@@ -616,7 +616,7 @@ function updateCartUI() {
   
   // Update totals
   cartSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
-  cartTotal.textContent = `₹${(subtotal + 49).toFixed(2)}`;
+  cartTotal.textContent = `₹${(subtotal + 2).toFixed(2)}`;
   
   // Add event listeners for cart controls
   document.querySelectorAll('.qty-btn').forEach(btn => {
