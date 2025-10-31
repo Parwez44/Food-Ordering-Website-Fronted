@@ -297,4 +297,88 @@
                 <option value="Sandwich">Sandwich</option>
                 <option value="Cake">Cake</option>
                 <option value="Pure Veg">Pure Veg</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Noodles">Noodles</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="item-price">Price (₹)</label>
+              <input type="number" id="item-price" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label for="item-image">Image URL</label>
+              <input type="url" id="item-image" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="item-description">Description</label>
+              <textarea id="item-description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Add Item</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SymbiEat. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-total">
+      <div class="total-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="total-row">
+        <span>Delivery Fee</span>
+        <span>₹49</span>
+      </div>
+      <div class="total-row final">
+        <span>Total</span>
+        <span id="cart-total">$49</span>
+      </div>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div class="modal hidden" id="admin-login-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Admin Login</h2>
+        <button class="close-modal">✕</button>
+      </div>
+      <div class="form-group">
+        <label for="admin-password">Password</label>
+        <div class="password-input">
+          <input type="password" id="admin-password" placeholder="Enter admin password">
+          <button class="toggle-password" type="button">👁️</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="login-admin">Login</button>
+        <button class="btn btn-outline" id="cancel-admin">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
                 
